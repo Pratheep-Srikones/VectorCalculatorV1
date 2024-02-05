@@ -96,6 +96,8 @@ public:
 };
 
 void printInstructions() {
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN);
 	cout << "Please consider the number systems for the functions" << endl;
 	cout << "1. Addition" << endl;
 	cout << "2. Subtraction" << endl;
@@ -103,6 +105,7 @@ void printInstructions() {
 	cout << "4. Vector Multiplication" << endl;
 	cout << "5. Get information of a vector" << endl;
 	cout << "0. Close the program" << endl;
+	SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 }
 
 int getUserInput() {
